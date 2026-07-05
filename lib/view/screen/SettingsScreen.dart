@@ -76,52 +76,6 @@ class SettingsScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 16),
-            // Profile & Info Placeholders
-            Card(
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-                side: BorderSide(
-                  color: isDark ? AppColor.borderDark : AppColor.borderLight,
-                ),
-              ),
-              color: theme.cardColor,
-              child: Column(
-                children: [
-                  ListTile(
-                    leading: const Icon(Icons.person_outline, color: Color(0xFF800000)),
-                    title: Text(
-                      "تعديل الملف الشخصي",
-                      style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
-                    ),
-                    trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                    onTap: () {},
-                  ),
-                  Divider(height: 1, color: isDark ? AppColor.borderDark : AppColor.borderLight),
-                  ListTile(
-                    leading: const Icon(Icons.language, color: Color(0xFF800000)),
-                    title: Text(
-                      "لغة التطبيق",
-                      style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: Text("العربية", style: theme.textTheme.bodySmall),
-                    trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                    onTap: () {},
-                  ),
-                  Divider(height: 1, color: isDark ? AppColor.borderDark : AppColor.borderLight),
-                  ListTile(
-                    leading: const Icon(Icons.info_outline, color: Color(0xFF800000)),
-                    title: Text(
-                      "حول التطبيق",
-                      style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
-                    ),
-                    trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                    onTap: () {},
-                  ),
-                ],
-              ),
-            )
           ],
         ),
       ),

@@ -10,8 +10,11 @@ import 'package:get/get.dart';
 import 'view/screen/ShwoCustomers.dart';
 import 'package:Saleh/view/screen/StatisticsScreen.dart';
 
+import 'package:Saleh/view/screen/SplashScreen.dart';
+
 List<GetPage<dynamic>> routes = [
-  GetPage(name: "/", page: () => const HomeScreen     ()),
+  GetPage(name: "/", page: () => const SplashScreen()),
+  GetPage(name: "/home", page: () => const HomeScreen()),
   GetPage(name: Approutes.shwocat, page: () => const ShwoCat()),
   GetPage(name: Approutes.client, page: () => const ShwoCustomers()),
   GetPage(name: Approutes.item, page: () => const ShwoProducts()),

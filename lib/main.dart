@@ -9,11 +9,14 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'core/constant/Themdata.dart';
 import 'core/functions/callback.dart';
 
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+
 final RouteObserver<ModalRoute<void>> routeObserver =
     RouteObserver<ModalRoute<void>>();
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   await initialServices();
 
