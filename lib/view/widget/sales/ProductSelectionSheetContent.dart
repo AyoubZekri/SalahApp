@@ -114,7 +114,7 @@ class _ProductSelectionSheetContentState
                                   expandedIndex = null;
                                 } else {
                                   expandedIndex = index;
-                                  qtyController.text = "1";
+                                  qtyController.text = "";
                                   customPriceController.text = prod.price != null
                                       ? (prod.price! % 1 == 0
                                           ? prod.price!.toInt().toString()

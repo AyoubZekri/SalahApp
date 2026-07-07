@@ -20,7 +20,6 @@ void main() async {
 
   await initialServices();
 
-
   await Supabase.initialize(
     url: 'https://xquifseyqyagcvbdixsg.supabase.co',
     anonKey: 'sb_publishable_hRLH8Cz6xnff5uG-6-_WmA_LIGA6bPv',
@@ -49,25 +48,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(RefreshService());
     final ThemeController themeController = Get.put(ThemeController());
-    
+
     return Obx(() => GetMaterialApp(
-      defaultTransition: Transition.fadeIn,
-      transitionDuration: const Duration(milliseconds: 300),
-      navigatorObservers: [routeObserver],
-      debugShowCheckedModeBanner: false,
-      title: 'Salah',
-      theme: themeLight,
-      darkTheme: themeDark,
-      themeMode: themeController.themeMode.value,
-      initialBinding: Initialbindings(),
-      getPages: routes,
-      builder: (context, child) {
-        return MediaQuery(
-          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-          child: child!,
-        );
-      },
-    ));
+          defaultTransition: Transition.fadeIn,
+          transitionDuration: const Duration(milliseconds: 300),
+          navigatorObservers: [routeObserver],
+          debugShowCheckedModeBanner: false,
+          title: 'Salah',
+          theme: themeLight,
+          darkTheme: themeDark,
+          themeMode: themeController.themeMode.value,
+          initialBinding: Initialbindings(),
+          getPages: routes,
+          builder: (context, child) {
+            return MediaQuery(
+              data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+              child: child!,
+            );
+          },
+        ));
   }
 }
-
